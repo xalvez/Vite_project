@@ -1,0 +1,157 @@
+.hero-outer-container {
+  padding: 20px 40px;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-teal-card {
+  background-color: #5bc0be; /* The teal color from the image */
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  min-height: 500px;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.hero-description p {
+  margin-bottom: 15px;
+}
+
+.hero-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Styles for the "Client" button */
+.btn-client {
+  background-color: #e9ecef;
+  color: #333;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  width: 250px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Styles for the "Doctor" button */
+.btn-doctor {
+  background-color: #2a7e7d; /* Darker teal for contrast */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  width: 250px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* Mockup Placeholder styles */
+.laptop-placeholder {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.1); /* Replace with image later */
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RTL Support */
+.rtl .hero-teal-card {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.rtl .hero-action-buttons {
+  align-items: flex-end;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-teal-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    border-radius: 30px;
+  }
+  
+  .hero-image-container {
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .hero-action-buttons {
+    align-items: center;
+  }
+}
+
+
+/* Container for the laptop and mobile mockup */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align to the right in LTR */
+  align-items: center;
+  position: relative;
+  max-width: 600px; /* Limits the size on large screens */
+}
+
+/* Fix for the laptop image dimensions */
+.laptop-img {
+  width: 100%;       /* Takes full width of its container */
+  height: auto;      /* Maintains aspect ratio */
+  display: block;    /* Removes bottom whitespace */
+  object-fit: contain; 
+  z-index: 2;
+}
+
+/* RTL adjustment for the image position */
+.rtl .hero-image-container {
+  justify-content: flex-start; /* Aligns to the left in RTL */
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 992px) {
+  .hero-image-container {
+    max-width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .laptop-img {
+    width: 90%; /* Slightly smaller on tablets/phones */
+  }
+}
